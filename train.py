@@ -28,6 +28,7 @@ class ModelHyperparameters:
     kernel_size: int
     stride: int
     padding: int
+    labels_norm: float  # factor to normalize labels into range(0, 1) (divide by this factor)
 
 
 @dataclasses.dataclass
@@ -105,7 +106,9 @@ class AgePredictionCNN(nn.Module):
         return x
 
 
-def train_model(model, dataloader, criterion, optimizer, num_epochs, device, training_config):
+def train_model(
+    model, dataloader, criterion, optimizer, num_epochs, device, training_config
+):
     """Train the model."""
     model.to(device)
     for epoch in range(num_epochs):
@@ -119,12 +122,12 @@ def train_model(model, dataloader, criterion, optimizer, num_epochs, device, tra
             loss.backward()
             optimizer.step()
             running_loss += loss.item()
+            print("DEBUG: output std = {outputs.std()}")
             print(f"Epoch {epoch+1}/{num_epochs}, loss: {loss.detach().item():.4f}")
         epoch_loss = running_loss / len(dataloader)
         print(f"Epoch {epoch+1}/{num_epochs}, Epoch loss: {epoch_loss:.4f}")
         torch.save(model.state_dict(), training_config.model_save_path)
         print("Model checkpointed.")
-
 
 
 def main():
@@ -159,7 +162,15 @@ def main():
     device = torch.device(
         "cuda" if torch.cuda.is_available() and training_config.cuda else "cpu"
     )
-    train_model(model, dataloader, criterion, optimizer, hyperparams.num_epochs, device, training_config)
+    train_model(
+        model,
+        dataloader,
+        criterion,
+        optimizer,
+        hyperparams.num_epochs,
+        device,
+        training_config,
+    )
     torch.save(model.state_dict(), training_config.model_save_path)
     print("Model saved + training completed.")
 
