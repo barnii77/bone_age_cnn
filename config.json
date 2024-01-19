@@ -6,7 +6,7 @@
     "image_size": [224, 224],
     "num_channels": 1,
     "dropout_rate": 0.5,
-    "kernel_size": 7,
+    "kernel_size": 3,
     "stride": 2,
     "padding": 3
   },
