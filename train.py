@@ -105,7 +105,7 @@ class AgePredictionCNN(nn.Module):
         return x
 
 
-def train_model(model, dataloader, criterion, optimizer, num_epochs, device):
+def train_model(model, dataloader, criterion, optimizer, num_epochs, device, training_config):
     """Train the model."""
     model.to(device)
     for epoch in range(num_epochs):
@@ -122,6 +122,9 @@ def train_model(model, dataloader, criterion, optimizer, num_epochs, device):
             print(f"Epoch {epoch+1}/{num_epochs}, loss: {loss.detach().item():.4f}")
         epoch_loss = running_loss / len(dataloader)
         print(f"Epoch {epoch+1}/{num_epochs}, Epoch loss: {epoch_loss:.4f}")
+        torch.save(model.state_dict(), training_config.model_save_path)
+        print("Model checkpointed.")
+
 
 
 def main():
@@ -156,7 +159,9 @@ def main():
     device = torch.device(
         "cuda" if torch.cuda.is_available() and training_config.cuda else "cpu"
     )
-    train_model(model, dataloader, criterion, optimizer, hyperparams.num_epochs, device)
+    train_model(model, dataloader, criterion, optimizer, hyperparams.num_epochs, device, training_config)
+    torch.save(model.state_dict(), training_config.model_save_path)
+    print("Model saved + training completed.")
 
 
 if __name__ == "__main__":
