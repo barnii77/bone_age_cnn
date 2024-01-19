@@ -107,7 +107,14 @@ class AgePredictionCNN(nn.Module):
 
 
 def train_model(
-    model, dataloader, criterion, optimizer, num_epochs, device, training_config
+    model,
+    dataloader,
+    criterion,
+    optimizer,
+    num_epochs,
+    device,
+    training_config,
+    hyperparams,
 ):
     """Train the model."""
     model.to(device)
@@ -116,6 +123,7 @@ def train_model(
         running_loss = 0.0
         for inputs, labels in dataloader:
             inputs, labels = inputs.to(device), labels.to(device)
+            labels = labels / hyperparams.labels_norm
             optimizer.zero_grad()
             outputs = model(inputs)
             loss = criterion(outputs.squeeze(), labels.float())
@@ -170,6 +178,7 @@ def main():
         hyperparams.num_epochs,
         device,
         training_config,
+        hyperparams,
     )
     torch.save(model.state_dict(), training_config.model_save_path)
     print("Model saved + training completed.")
