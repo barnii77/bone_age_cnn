@@ -86,7 +86,9 @@ class XRayAgeDataset(Dataset):
 class AgePredictionCNN(nn.Module):
     """CNN model for age prediction from X-ray images."""
 
-    def __init__(self, num_channels, dropout_rate, kernel_size, stride, padding):
+    def __init__(
+        self, num_channels, dropout_rate, kernel_size, stride, padding, labels_norm
+    ):
         super(AgePredictionCNN, self).__init__()
         self.base_model = models.resnet18(pretrained=True)
         self.base_model.conv1 = nn.Conv2d(
@@ -100,6 +102,7 @@ class AgePredictionCNN(nn.Module):
         self.dropout = nn.Dropout(dropout_rate)
         self.fc = nn.Linear(self.base_model.fc.in_features, 1)
         self.base_model.fc = self.fc
+        self.labels_norm = labels_norm
 
     def forward(self, x):
         x = self.base_model(x)
@@ -164,6 +167,7 @@ def main():
         hyperparams.kernel_size,
         hyperparams.stride,
         hyperparams.padding,
+        hyperparams.labels_norm,
     )
     criterion = MSELoss()
     optimizer = Adam(model.parameters(), lr=hyperparams.learning_rate)
