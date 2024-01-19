@@ -2,8 +2,7 @@ import argparse
 from PIL import Image
 import torch
 from torchvision import transforms
-from model import AgePredictionCNN  # do not remove, is actually needed by pytorch
-from train import ModelHyperparameters, load_config
+from train import AgePredictionCNN, ModelHyperparameters, load_config
 
 
 def parse_args():
@@ -23,9 +22,16 @@ def parse_args():
     return parser.parse_args()
 
 
-def load_model(model_path):
+def load_model(model_path, hyperparams):
     """Load the trained model from a file."""
-    model = torch.load(model_path)
+    model = AgePredictionCNN(
+        hyperparams.num_channels,
+        hyperparams.dropout_rate,
+        hyperparams.kernel_size,
+        hyperparams.stride,
+        hyperparams.padding,
+    )
+    model.load_state_dict(torch.load(model_path))
     model.eval()
     return model
 
@@ -36,7 +42,7 @@ def predict_age(model, image_path, transform, device):
     image = transform(image).unsqueeze(0).to(device)
     with torch.no_grad():
         prediction = model(image).item()
-    return prediction * model.labels_norm  # Un-normalize the prediction
+    return prediction
 
 
 def main():
