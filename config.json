@@ -1,7 +1,7 @@
 {
   "hyperparameters": {
     "learning_rate": 1e-3,
-    "batch_size": 128,
+    "batch_size": 64,
     "num_epochs": 2,
     "image_size": [224, 224],
     "num_channels": 1,
@@ -12,10 +12,17 @@
     "labels_norm": 216
   },
   "training": {
-    "dataset_path": "dataset/",
+    "dataset_path": "dataset/train/",
     "csv_file": "train.csv",
-    "image_folder": "images/",
-    "model_save_path": "model.pth",
+    "image_folder": "image/",
+    "model_save_path": "checkpoints/model.pth",
+    "cuda": true
+  },
+  "testing": {
+    "dataset_path": "dataset/train/",
+    "csv_file": "train.csv",
+    "image_folder": "image/",
+    "model_save_path": "checkpoints/model.pth",
     "cuda": true
   }
 }

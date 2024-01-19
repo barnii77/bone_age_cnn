@@ -3,15 +3,13 @@ import dataclasses
 import json
 import os
 from typing import Any
-from PIL import Image
-import pandas as pd
 import torch
 from torch.nn import MSELoss
 from torch.optim import Adam
-from torch.utils.data import Dataset
 from torch.utils.data import DataLoader
 from torchvision import transforms
 from model import AgePredictionCNN
+from dataset import XRayAgeDataset
 
 
 @dataclasses.dataclass
@@ -60,28 +58,6 @@ def parse_args() -> Any:
     return args
 
 
-class XRayAgeDataset(Dataset):
-    """Dataset for X-ray age prediction."""
-
-    def __init__(self, csv_file, image_folder, transform=None):
-        self.data_frame = pd.read_csv(csv_file)
-        self.image_folder = image_folder
-        self.transform = transform
-
-    def __len__(self):
-        return len(self.data_frame)
-
-    def __getitem__(self, idx):
-        img_name = os.path.join(
-            self.image_folder, f"{self.data_frame.iloc[idx, 0]}.png"
-        )
-        image = Image.open(img_name)
-        age = self.data_frame.iloc[idx, 1]
-        if self.transform:
-            image = self.transform(image)
-        return image, age
-
-
 def train_model(
     model,
     dataloader,
@@ -106,7 +82,7 @@ def train_model(
             loss.backward()
             optimizer.step()
             running_loss += loss.item()
-            print("DEBUG: output std = {outputs.std()}")
+            print(f"DEBUG: output std = {outputs.std()}")
             print(f"Epoch {epoch+1}/{num_epochs}, loss: {loss.detach().item():.4f}")
         epoch_loss = running_loss / len(dataloader)
         print(f"Epoch {epoch+1}/{num_epochs}, Epoch loss: {epoch_loss:.4f}")
