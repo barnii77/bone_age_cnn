@@ -1,0 +1,111 @@
+{
+    "os": "Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+    "python": "3.11.5",
+    "heartbeatAt": "2024-01-20T00:00:39.324415",
+    "startedAt": "2024-01-20T00:00:38.533489",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--config",
+        "config.json"
+    ],
+    "state": "running",
+    "program": "/home/david/projects/bone_age_cnn/train.py",
+    "codePathLocal": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/barnii77/bone_age_cnn",
+        "commit": "93aef442cde136f6cb451e2605b641d981fc2083"
+    },
+    "email": "david.harrer@gmx.at",
+    "root": "/home/david/projects/bone_age_cnn",
+    "host": "LAPTOP-H1NF4KQD",
+    "username": "david",
+    "executable": "/home/david/anaconda3/bin/python",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 2592.0080000000003,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2592.008,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2592.008,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2592.008,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2592.008,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2592.008,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2592.008,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2592.008,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2592.008,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2592.008,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2592.008,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2592.008,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2592.008,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 1006.853931427002,
+            "used": 32.466407775878906
+        }
+    },
+    "gpu": "NVIDIA GeForce GTX 1650 Ti",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce GTX 1650 Ti",
+            "memory_total": 4294967296
+        }
+    ],
+    "memory": {
+        "total": 7.674945831298828
+    }
+}

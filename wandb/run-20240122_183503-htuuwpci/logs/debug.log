@@ -1,0 +1,27 @@
+2024-01-22 18:35:03,189 INFO    MainThread:2669 [wandb_setup.py:_flush():76] Current SDK version is 0.16.2
+2024-01-22 18:35:03,189 INFO    MainThread:2669 [wandb_setup.py:_flush():76] Configure stats pid to 2669
+2024-01-22 18:35:03,189 INFO    MainThread:2669 [wandb_setup.py:_flush():76] Loading settings from /home/david/.config/wandb/settings
+2024-01-22 18:35:03,189 INFO    MainThread:2669 [wandb_setup.py:_flush():76] Loading settings from /home/david/projects/bone_age_cnn/wandb/settings
+2024-01-22 18:35:03,189 INFO    MainThread:2669 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-01-22 18:35:03,189 INFO    MainThread:2669 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-01-22 18:35:03,189 INFO    MainThread:2669 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program_abspath': '/home/david/projects/bone_age_cnn/train.py', 'program': '/home/david/projects/bone_age_cnn/train.py'}
+2024-01-22 18:35:03,189 INFO    MainThread:2669 [wandb_init.py:_log_setup():526] Logging user logs to /home/david/projects/bone_age_cnn/wandb/run-20240122_183503-htuuwpci/logs/debug.log
+2024-01-22 18:35:03,189 INFO    MainThread:2669 [wandb_init.py:_log_setup():527] Logging internal logs to /home/david/projects/bone_age_cnn/wandb/run-20240122_183503-htuuwpci/logs/debug-internal.log
+2024-01-22 18:35:03,189 INFO    MainThread:2669 [wandb_init.py:init():566] calling init triggers
+2024-01-22 18:35:03,189 INFO    MainThread:2669 [wandb_init.py:init():573] wandb.init called with sweep_config: {}
+config: {'hyperparameters': {'learning_rate': 0.001, 'batch_size': 64, 'num_epochs': 6, 'image_size': [256, 256], 'num_channels': 1, 'dropout_rate': 0.3, 'kernel_size': 5, 'stride': 2, 'padding': 3, 'labels_norm': 216}, 'training': {'dataset_path': 'dataset/train/', 'csv_file': 'train.csv', 'image_folder': 'image/', 'model_save_path': 'checkpoints/model.pth', 'cuda': True}, 'testing': {'dataset_path': 'dataset/train/', 'csv_file': 'train.csv', 'image_folder': 'image/', 'model_save_path': 'checkpoints/model.pth', 'cuda': True}}
+2024-01-22 18:35:03,189 INFO    MainThread:2669 [wandb_init.py:init():616] starting backend
+2024-01-22 18:35:03,189 INFO    MainThread:2669 [wandb_init.py:init():620] setting up manager
+2024-01-22 18:35:03,190 INFO    MainThread:2669 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-01-22 18:35:03,192 INFO    MainThread:2669 [wandb_init.py:init():628] backend started and connected
+2024-01-22 18:35:03,193 INFO    MainThread:2669 [wandb_init.py:init():720] updated telemetry
+2024-01-22 18:35:03,197 INFO    MainThread:2669 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-01-22 18:35:03,860 INFO    MainThread:2669 [wandb_run.py:_on_init():2254] communicating current version
+2024-01-22 18:35:04,048 INFO    MainThread:2669 [wandb_run.py:_on_init():2263] got version response 
+2024-01-22 18:35:04,048 INFO    MainThread:2669 [wandb_init.py:init():804] starting run threads in backend
+2024-01-22 18:35:09,212 INFO    MainThread:2669 [wandb_run.py:_console_start():2233] atexit reg
+2024-01-22 18:35:09,212 INFO    MainThread:2669 [wandb_run.py:_redirect():2088] redirect: wrap_raw
+2024-01-22 18:35:09,212 INFO    MainThread:2669 [wandb_run.py:_redirect():2153] Wrapping output streams.
+2024-01-22 18:35:09,212 INFO    MainThread:2669 [wandb_run.py:_redirect():2178] Redirects installed.
+2024-01-22 18:35:09,213 INFO    MainThread:2669 [wandb_init.py:init():847] run started, returning control to user process
+2024-01-22 18:35:25,532 WARNING MsgRouterThr:2669 [router.py:message_loop():77] message_loop has been closed

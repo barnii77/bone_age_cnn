@@ -1,0 +1,803 @@
+/home/david/anaconda3/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/david/anaconda3/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/david/anaconda3/lib/python3.11/site-packages/torch/nn/modules/conv.py:456: UserWarning: Applied workaround for CuDNN issue, install nvrtc.so (Triggered internally at /opt/conda/conda-bld/pytorch_1702400440653/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:80.)
+  return F.conv2d(input, weight, bias, self.stride,
+DEBUG: output std = 0.2719762623310089
+Epoch 1/2, loss: 0.6030
+DEBUG: output std = 1.1127632856369019
+Epoch 1/2, loss: 1.2004
+DEBUG: output std = 1.6764661073684692
+Epoch 1/2, loss: 2.8321
+DEBUG: output std = 1.9689104557037354
+Epoch 1/2, loss: 4.0884
+DEBUG: output std = 1.1798449754714966
+Epoch 1/2, loss: 1.5818
+DEBUG: output std = 0.6851196885108948
+Epoch 1/2, loss: 0.5577
+DEBUG: output std = 0.3511914610862732
+Epoch 1/2, loss: 0.1550
+DEBUG: output std = 0.36715447902679443
+Epoch 1/2, loss: 0.1511
+DEBUG: output std = 0.2267729938030243
+Epoch 1/2, loss: 0.1050
+DEBUG: output std = 0.16778446733951569
+Epoch 1/2, loss: 0.0746
+DEBUG: output std = 0.23494994640350342
+Epoch 1/2, loss: 0.0894
+DEBUG: output std = 0.1985945999622345
+Epoch 1/2, loss: 0.0686
+DEBUG: output std = 0.07586955279111862
+Epoch 1/2, loss: 0.0389
+DEBUG: output std = 0.0924222394824028
+Epoch 1/2, loss: 0.0288
+DEBUG: output std = 0.14243362843990326
+Epoch 1/2, loss: 0.0742
+DEBUG: output std = 0.12971369922161102
+Epoch 1/2, loss: 0.0448
+DEBUG: output std = 0.09404335170984268
+Epoch 1/2, loss: 0.0374
+DEBUG: output std = 0.08491799980401993
+Epoch 1/2, loss: 0.0459
+DEBUG: output std = 0.0659903883934021
+Epoch 1/2, loss: 0.0245
+DEBUG: output std = 0.08573724329471588
+Epoch 1/2, loss: 0.0424
+DEBUG: output std = 0.07686584442853928
+Epoch 1/2, loss: 0.0419
+DEBUG: output std = 0.08209256082773209
+Epoch 1/2, loss: 0.0342
+DEBUG: output std = 0.0779450535774231
+Epoch 1/2, loss: 0.0331
+DEBUG: output std = 0.0723554864525795
+Epoch 1/2, loss: 0.0263
+DEBUG: output std = 0.06656306236982346
+Epoch 1/2, loss: 0.0277
+DEBUG: output std = 0.07574121654033661
+Epoch 1/2, loss: 0.0367
+DEBUG: output std = 0.07212016731500626
+Epoch 1/2, loss: 0.0305
+DEBUG: output std = 0.07970162481069565
+Epoch 1/2, loss: 0.0354
+DEBUG: output std = 0.0804235190153122
+Epoch 1/2, loss: 0.0310
+DEBUG: output std = 0.07703190296888351
+Epoch 1/2, loss: 0.0388
+DEBUG: output std = 0.07925606518983841
+Epoch 1/2, loss: 0.0241
+DEBUG: output std = 0.05502813681960106
+Epoch 1/2, loss: 0.0346
+DEBUG: output std = 0.050006989389657974
+Epoch 1/2, loss: 0.0262
+DEBUG: output std = 0.06640727818012238
+Epoch 1/2, loss: 0.0297
+DEBUG: output std = 0.0772993192076683
+Epoch 1/2, loss: 0.0249
+DEBUG: output std = 0.08401861786842346
+Epoch 1/2, loss: 0.0319
+DEBUG: output std = 0.08585101366043091
+Epoch 1/2, loss: 0.0339
+DEBUG: output std = 0.08748907595872879
+Epoch 1/2, loss: 0.0355
+DEBUG: output std = 0.09396646916866302
+Epoch 1/2, loss: 0.0372
+DEBUG: output std = 0.0785219743847847
+Epoch 1/2, loss: 0.0325
+DEBUG: output std = 0.08442665636539459
+Epoch 1/2, loss: 0.0253
+DEBUG: output std = 0.09998954087495804
+Epoch 1/2, loss: 0.0276
+DEBUG: output std = 0.0972592905163765
+Epoch 1/2, loss: 0.0266
+DEBUG: output std = 0.10445118695497513
+Epoch 1/2, loss: 0.0340
+DEBUG: output std = 0.0820138230919838
+Epoch 1/2, loss: 0.0230
+DEBUG: output std = 0.08343131095170975
+Epoch 1/2, loss: 0.0310
+DEBUG: output std = 0.10477796941995621
+Epoch 1/2, loss: 0.0312
+DEBUG: output std = 0.08815234899520874
+Epoch 1/2, loss: 0.0267
+DEBUG: output std = 0.10817325115203857
+Epoch 1/2, loss: 0.0217
+DEBUG: output std = 0.10830675065517426
+Epoch 1/2, loss: 0.0350
+DEBUG: output std = 0.09469609707593918
+Epoch 1/2, loss: 0.0235
+DEBUG: output std = 0.11475937068462372
+Epoch 1/2, loss: 0.0245
+DEBUG: output std = 0.10220633447170258
+Epoch 1/2, loss: 0.0240
+DEBUG: output std = 0.11385224759578705
+Epoch 1/2, loss: 0.0368
+DEBUG: output std = 0.11851553618907928
+Epoch 1/2, loss: 0.0243
+DEBUG: output std = 0.13479351997375488
+Epoch 1/2, loss: 0.0251
+DEBUG: output std = 0.10807675868272781
+Epoch 1/2, loss: 0.0216
+DEBUG: output std = 0.12123993039131165
+Epoch 1/2, loss: 0.0302
+DEBUG: output std = 0.10908186435699463
+Epoch 1/2, loss: 0.0265
+DEBUG: output std = 0.10175622999668121
+Epoch 1/2, loss: 0.0418
+DEBUG: output std = 0.10386219620704651
+Epoch 1/2, loss: 0.0293
+DEBUG: output std = 0.1094847247004509
+Epoch 1/2, loss: 0.0364
+DEBUG: output std = 0.08550295233726501
+Epoch 1/2, loss: 0.0269
+DEBUG: output std = 0.09091027081012726
+Epoch 1/2, loss: 0.0377
+DEBUG: output std = 0.0996023416519165
+Epoch 1/2, loss: 0.0267
+DEBUG: output std = 0.08725809305906296
+Epoch 1/2, loss: 0.0302
+DEBUG: output std = 0.11151605099439621
+Epoch 1/2, loss: 0.0317
+DEBUG: output std = 0.0952259823679924
+Epoch 1/2, loss: 0.0216
+DEBUG: output std = 0.09871723502874374
+Epoch 1/2, loss: 0.0216
+DEBUG: output std = 0.10694923251867294
+Epoch 1/2, loss: 0.0196
+DEBUG: output std = 0.05867227911949158
+Epoch 1/2, loss: 0.0263
+DEBUG: output std = 0.09254096448421478
+Epoch 1/2, loss: 0.0172
+DEBUG: output std = 0.10440322011709213
+Epoch 1/2, loss: 0.0232
+DEBUG: output std = 0.0926072895526886
+Epoch 1/2, loss: 0.0163
+DEBUG: output std = 0.08984144032001495
+Epoch 1/2, loss: 0.0315
+DEBUG: output std = 0.08873927593231201
+Epoch 1/2, loss: 0.0247
+DEBUG: output std = 0.11135675013065338
+Epoch 1/2, loss: 0.0177
+DEBUG: output std = 0.11565934866666794
+Epoch 1/2, loss: 0.0245
+DEBUG: output std = 0.12757433950901031
+Epoch 1/2, loss: 0.0252
+DEBUG: output std = 0.14688250422477722
+Epoch 1/2, loss: 0.0357
+DEBUG: output std = 0.12018223851919174
+Epoch 1/2, loss: 0.0135
+DEBUG: output std = 0.11305102705955505
+Epoch 1/2, loss: 0.0213
+DEBUG: output std = 0.12744925916194916
+Epoch 1/2, loss: 0.0264
+DEBUG: output std = 0.12442212551832199
+Epoch 1/2, loss: 0.0315
+DEBUG: output std = 0.1421365737915039
+Epoch 1/2, loss: 0.0337
+DEBUG: output std = 0.12089452147483826
+Epoch 1/2, loss: 0.0298
+DEBUG: output std = 0.10544387996196747
+Epoch 1/2, loss: 0.0280
+DEBUG: output std = 0.11598595976829529
+Epoch 1/2, loss: 0.0229
+DEBUG: output std = 0.12635502219200134
+Epoch 1/2, loss: 0.0162
+DEBUG: output std = 0.12422815710306168
+Epoch 1/2, loss: 0.0170
+DEBUG: output std = 0.11414355039596558
+Epoch 1/2, loss: 0.0199
+DEBUG: output std = 0.11710547655820847
+Epoch 1/2, loss: 0.0289
+DEBUG: output std = 0.09090778976678848
+Epoch 1/2, loss: 0.0221
+DEBUG: output std = 0.09849879890680313
+Epoch 1/2, loss: 0.0297
+DEBUG: output std = 0.10821627825498581
+Epoch 1/2, loss: 0.0250
+DEBUG: output std = 0.11342243105173111
+Epoch 1/2, loss: 0.0337
+DEBUG: output std = 0.09392702579498291
+Epoch 1/2, loss: 0.0263
+DEBUG: output std = 0.11780018359422684
+Epoch 1/2, loss: 0.0234
+DEBUG: output std = 0.09102896600961685
+Epoch 1/2, loss: 0.0213
+DEBUG: output std = 0.11638076603412628
+Epoch 1/2, loss: 0.0464
+DEBUG: output std = 0.09932702034711838
+Epoch 1/2, loss: 0.0215
+DEBUG: output std = 0.11256381124258041
+Epoch 1/2, loss: 0.0251
+DEBUG: output std = 0.1337457001209259
+Epoch 1/2, loss: 0.0321
+DEBUG: output std = 0.11434826999902725
+Epoch 1/2, loss: 0.0343
+DEBUG: output std = 0.11331655830144882
+Epoch 1/2, loss: 0.0269
+DEBUG: output std = 0.1200244128704071
+Epoch 1/2, loss: 0.0208
+DEBUG: output std = 0.09106302261352539
+Epoch 1/2, loss: 0.0311
+DEBUG: output std = 0.11361973732709885
+Epoch 1/2, loss: 0.0210
+DEBUG: output std = 0.10669710487127304
+Epoch 1/2, loss: 0.0239
+DEBUG: output std = 0.14390915632247925
+Epoch 1/2, loss: 0.0265
+DEBUG: output std = 0.13818930089473724
+Epoch 1/2, loss: 0.0211
+DEBUG: output std = 0.13258987665176392
+Epoch 1/2, loss: 0.0328
+DEBUG: output std = 0.11642452329397202
+Epoch 1/2, loss: 0.0238
+DEBUG: output std = 0.1412937194108963
+Epoch 1/2, loss: 0.0431
+DEBUG: output std = 0.11516625434160233
+Epoch 1/2, loss: 0.0158
+DEBUG: output std = 0.1367253214120865
+Epoch 1/2, loss: 0.0301
+DEBUG: output std = 0.1257016509771347
+Epoch 1/2, loss: 0.0302
+DEBUG: output std = 0.13026204705238342
+Epoch 1/2, loss: 0.0278
+DEBUG: output std = 0.12321807444095612
+Epoch 1/2, loss: 0.0373
+DEBUG: output std = 0.11123049259185791
+Epoch 1/2, loss: 0.0237
+DEBUG: output std = 0.09576544910669327
+Epoch 1/2, loss: 0.0182
+DEBUG: output std = 0.11103077232837677
+Epoch 1/2, loss: 0.0259
+DEBUG: output std = 0.10106099396944046
+Epoch 1/2, loss: 0.0216
+DEBUG: output std = 0.08715537935495377
+Epoch 1/2, loss: 0.0293
+DEBUG: output std = 0.09164364635944366
+Epoch 1/2, loss: 0.0236
+DEBUG: output std = 0.0933787077665329
+Epoch 1/2, loss: 0.0330
+DEBUG: output std = 0.10208786278963089
+Epoch 1/2, loss: 0.0304
+DEBUG: output std = 0.10021603852510452
+Epoch 1/2, loss: 0.0248
+DEBUG: output std = 0.1276678740978241
+Epoch 1/2, loss: 0.0206
+DEBUG: output std = 0.10119925439357758
+Epoch 1/2, loss: 0.0320
+DEBUG: output std = 0.14467886090278625
+Epoch 1/2, loss: 0.0294
+DEBUG: output std = 0.13526666164398193
+Epoch 1/2, loss: 0.0291
+DEBUG: output std = 0.13178285956382751
+Epoch 1/2, loss: 0.0238
+DEBUG: output std = 0.12524107098579407
+Epoch 1/2, loss: 0.0252
+DEBUG: output std = 0.11278540641069412
+Epoch 1/2, loss: 0.0274
+DEBUG: output std = 0.1257878988981247
+Epoch 1/2, loss: 0.0250
+DEBUG: output std = 0.1183745339512825
+Epoch 1/2, loss: 0.0229
+DEBUG: output std = 0.12781117856502533
+Epoch 1/2, loss: 0.0335
+DEBUG: output std = 0.12360204756259918
+Epoch 1/2, loss: 0.0176
+DEBUG: output std = 0.14105196297168732
+Epoch 1/2, loss: 0.0258
+DEBUG: output std = 0.13297730684280396
+Epoch 1/2, loss: 0.0202
+DEBUG: output std = 0.10480475425720215
+Epoch 1/2, loss: 0.0270
+DEBUG: output std = 0.1246596947312355
+Epoch 1/2, loss: 0.0257
+DEBUG: output std = 0.10920301824808121
+Epoch 1/2, loss: 0.0205
+DEBUG: output std = 0.12365159392356873
+Epoch 1/2, loss: 0.0198
+DEBUG: output std = 0.103387251496315
+Epoch 1/2, loss: 0.0194
+DEBUG: output std = 0.117512546479702
+Epoch 1/2, loss: 0.0203
+DEBUG: output std = 0.10733246803283691
+Epoch 1/2, loss: 0.0287
+DEBUG: output std = 0.11079344153404236
+Epoch 1/2, loss: 0.0116
+DEBUG: output std = 0.10932698845863342
+Epoch 1/2, loss: 0.0182
+DEBUG: output std = 0.10059180855751038
+Epoch 1/2, loss: 0.0207
+DEBUG: output std = 0.10826071351766586
+Epoch 1/2, loss: 0.0218
+DEBUG: output std = 0.11130024492740631
+Epoch 1/2, loss: 0.0163
+DEBUG: output std = 0.12162046879529953
+Epoch 1/2, loss: 0.0253
+DEBUG: output std = 0.12470971047878265
+Epoch 1/2, loss: 0.0263
+DEBUG: output std = 0.13868483901023865
+Epoch 1/2, loss: 0.0231
+DEBUG: output std = 0.10641474276781082
+Epoch 1/2, loss: 0.0266
+DEBUG: output std = 0.11672244966030121
+Epoch 1/2, loss: 0.0244
+DEBUG: output std = 0.16189096868038177
+Epoch 1/2, loss: 0.0212
+DEBUG: output std = 0.1081327348947525
+Epoch 1/2, loss: 0.0141
+DEBUG: output std = 0.11147119849920273
+Epoch 1/2, loss: 0.0235
+DEBUG: output std = 0.1254730224609375
+Epoch 1/2, loss: 0.0206
+DEBUG: output std = 0.1211155578494072
+Epoch 1/2, loss: 0.0256
+DEBUG: output std = 0.12191563099622726
+Epoch 1/2, loss: 0.0227
+DEBUG: output std = 0.10639932006597519
+Epoch 1/2, loss: 0.0230
+DEBUG: output std = 0.11036863178014755
+Epoch 1/2, loss: 0.0306
+DEBUG: output std = 0.1399545818567276
+Epoch 1/2, loss: 0.0183
+DEBUG: output std = 0.11869578063488007
+Epoch 1/2, loss: 0.0224
+DEBUG: output std = 0.13733920454978943
+Epoch 1/2, loss: 0.0233
+DEBUG: output std = 0.13026219606399536
+Epoch 1/2, loss: 0.0236
+DEBUG: output std = 0.12875491380691528
+Epoch 1/2, loss: 0.0240
+DEBUG: output std = 0.11767557263374329
+Epoch 1/2, loss: 0.0165
+DEBUG: output std = 0.14099134504795074
+Epoch 1/2, loss: 0.0207
+DEBUG: output std = 0.14995983242988586
+Epoch 1/2, loss: 0.0241
+DEBUG: output std = 0.13712090253829956
+Epoch 1/2, loss: 0.0206
+DEBUG: output std = 0.1276523768901825
+Epoch 1/2, loss: 0.0273
+DEBUG: output std = 0.14152292907238007
+Epoch 1/2, loss: 0.0176
+DEBUG: output std = 0.12768356502056122
+Epoch 1/2, loss: 0.0226
+DEBUG: output std = 0.1387261599302292
+Epoch 1/2, loss: 0.0181
+DEBUG: output std = 0.1299918293952942
+Epoch 1/2, loss: 0.0235
+DEBUG: output std = 0.13554032146930695
+Epoch 1/2, loss: 0.0195
+DEBUG: output std = 0.10791567713022232
+Epoch 1/2, loss: 0.0260
+DEBUG: output std = 0.13001197576522827
+Epoch 1/2, loss: 0.0251
+DEBUG: output std = 0.1057078167796135
+Epoch 1/2, loss: 0.0203
+DEBUG: output std = 0.1227780282497406
+Epoch 1/2, loss: 0.0217
+DEBUG: output std = 0.1043778583407402
+Epoch 1/2, loss: 0.0182
+DEBUG: output std = 0.10364416241645813
+Epoch 1/2, loss: 0.0207
+DEBUG: output std = 0.0924375057220459
+Epoch 1/2, loss: 0.0193
+DEBUG: output std = 0.10980653017759323
+Epoch 1/2, loss: 0.0242
+DEBUG: output std = 0.11937602609395981
+Epoch 1/2, loss: 0.0196
+DEBUG: output std = 0.11591967940330505
+Epoch 1/2, loss: 0.0287
+DEBUG: output std = 0.10271304845809937
+Epoch 1/2, loss: 0.0139
+DEBUG: output std = 0.13089917600154877
+Epoch 1/2, loss: 0.0169
+DEBUG: output std = 0.1212756559252739
+Epoch 1/2, loss: 0.0239
+DEBUG: output std = 0.11975018680095673
+Epoch 1/2, loss: 0.0295
+DEBUG: output std = 0.13006728887557983
+Epoch 1/2, loss: 0.0159
+DEBUG: output std = 0.12478596717119217
+Epoch 1/2, loss: 0.0277
+DEBUG: output std = 0.04110584780573845
+Epoch 1/2, loss: 0.0048
+Epoch 1/2, Epoch loss: 0.0829
+Model checkpointed.
+DEBUG: output std = 0.1450164020061493
+Epoch 2/2, loss: 0.0246
+DEBUG: output std = 0.15129365026950836
+Epoch 2/2, loss: 0.0289
+DEBUG: output std = 0.12235809117555618
+Epoch 2/2, loss: 0.0260
+DEBUG: output std = 0.14136658608913422
+Epoch 2/2, loss: 0.0213
+DEBUG: output std = 0.1283985674381256
+Epoch 2/2, loss: 0.0146
+DEBUG: output std = 0.12804599106311798
+Epoch 2/2, loss: 0.0251
+DEBUG: output std = 0.11919540166854858
+Epoch 2/2, loss: 0.0227
+DEBUG: output std = 0.1398371458053589
+Epoch 2/2, loss: 0.0254
+DEBUG: output std = 0.14439837634563446
+Epoch 2/2, loss: 0.0230
+DEBUG: output std = 0.11774297058582306
+Epoch 2/2, loss: 0.0214
+DEBUG: output std = 0.10774865001440048
+Epoch 2/2, loss: 0.0184
+DEBUG: output std = 0.13070231676101685
+Epoch 2/2, loss: 0.0280
+DEBUG: output std = 0.12812775373458862
+Epoch 2/2, loss: 0.0168
+DEBUG: output std = 0.11900675296783447
+Epoch 2/2, loss: 0.0151
+DEBUG: output std = 0.13373886048793793
+Epoch 2/2, loss: 0.0231
+DEBUG: output std = 0.13845638930797577
+Epoch 2/2, loss: 0.0294
+DEBUG: output std = 0.1336248815059662
+Epoch 2/2, loss: 0.0176
+DEBUG: output std = 0.11389708518981934
+Epoch 2/2, loss: 0.0214
+DEBUG: output std = 0.11882704496383667
+Epoch 2/2, loss: 0.0220
+DEBUG: output std = 0.15497587621212006
+Epoch 2/2, loss: 0.0245
+DEBUG: output std = 0.12499233335256577
+Epoch 2/2, loss: 0.0173
+DEBUG: output std = 0.11856552213430405
+Epoch 2/2, loss: 0.0202
+DEBUG: output std = 0.11494520306587219
+Epoch 2/2, loss: 0.0232
+DEBUG: output std = 0.10108859837055206
+Epoch 2/2, loss: 0.0169
+DEBUG: output std = 0.11344075202941895
+Epoch 2/2, loss: 0.0234
+DEBUG: output std = 0.11246027797460556
+Epoch 2/2, loss: 0.0228
+DEBUG: output std = 0.09865209460258484
+Epoch 2/2, loss: 0.0187
+DEBUG: output std = 0.11336524784564972
+Epoch 2/2, loss: 0.0191
+DEBUG: output std = 0.11748764663934708
+Epoch 2/2, loss: 0.0265
+DEBUG: output std = 0.11047029495239258
+Epoch 2/2, loss: 0.0186
+DEBUG: output std = 0.13106054067611694
+Epoch 2/2, loss: 0.0248
+DEBUG: output std = 0.1520858258008957
+Epoch 2/2, loss: 0.0191
+DEBUG: output std = 0.1212955117225647
+Epoch 2/2, loss: 0.0165
+DEBUG: output std = 0.12547802925109863
+Epoch 2/2, loss: 0.0191
+DEBUG: output std = 0.1371380090713501
+Epoch 2/2, loss: 0.0203
+DEBUG: output std = 0.11031526327133179
+Epoch 2/2, loss: 0.0340
+DEBUG: output std = 0.13091330230236053
+Epoch 2/2, loss: 0.0262
+DEBUG: output std = 0.1474185585975647
+Epoch 2/2, loss: 0.0224
+DEBUG: output std = 0.14105916023254395
+Epoch 2/2, loss: 0.0198
+DEBUG: output std = 0.1350439488887787
+Epoch 2/2, loss: 0.0179
+DEBUG: output std = 0.13451159000396729
+Epoch 2/2, loss: 0.0158
+DEBUG: output std = 0.1596302092075348
+Epoch 2/2, loss: 0.0260
+DEBUG: output std = 0.11279447376728058
+Epoch 2/2, loss: 0.0135
+DEBUG: output std = 0.13723665475845337
+Epoch 2/2, loss: 0.0164
+DEBUG: output std = 0.12052707374095917
+Epoch 2/2, loss: 0.0227
+DEBUG: output std = 0.1411604881286621
+Epoch 2/2, loss: 0.0227
+DEBUG: output std = 0.11262572556734085
+Epoch 2/2, loss: 0.0174
+DEBUG: output std = 0.13200345635414124
+Epoch 2/2, loss: 0.0218
+DEBUG: output std = 0.1157265454530716
+Epoch 2/2, loss: 0.0273
+DEBUG: output std = 0.1500556468963623
+Epoch 2/2, loss: 0.0216
+DEBUG: output std = 0.11275313794612885
+Epoch 2/2, loss: 0.0183
+DEBUG: output std = 0.1381545215845108
+Epoch 2/2, loss: 0.0177
+DEBUG: output std = 0.11263757199048996
+Epoch 2/2, loss: 0.0314
+DEBUG: output std = 0.12091106921434402
+Epoch 2/2, loss: 0.0178
+DEBUG: output std = 0.12315376847982407
+Epoch 2/2, loss: 0.0271
+DEBUG: output std = 0.14930401742458344
+Epoch 2/2, loss: 0.0290
+DEBUG: output std = 0.13169103860855103
+Epoch 2/2, loss: 0.0245
+DEBUG: output std = 0.12294404953718185
+Epoch 2/2, loss: 0.0194
+DEBUG: output std = 0.11948174238204956
+Epoch 2/2, loss: 0.0237
+DEBUG: output std = 0.12286980450153351
+Epoch 2/2, loss: 0.0157
+DEBUG: output std = 0.13618317246437073
+Epoch 2/2, loss: 0.0212
+DEBUG: output std = 0.11252089589834213
+Epoch 2/2, loss: 0.0145
+DEBUG: output std = 0.13249178230762482
+Epoch 2/2, loss: 0.0311
+DEBUG: output std = 0.1622033417224884
+Epoch 2/2, loss: 0.0183
+DEBUG: output std = 0.15362465381622314
+Epoch 2/2, loss: 0.0156
+DEBUG: output std = 0.10586857795715332
+Epoch 2/2, loss: 0.0232
+DEBUG: output std = 0.1269688457250595
+Epoch 2/2, loss: 0.0259
+DEBUG: output std = 0.12183511257171631
+Epoch 2/2, loss: 0.0239
+DEBUG: output std = 0.12926864624023438
+Epoch 2/2, loss: 0.0240
+DEBUG: output std = 0.13721595704555511
+Epoch 2/2, loss: 0.0231
+DEBUG: output std = 0.15181031823158264
+Epoch 2/2, loss: 0.0144
+DEBUG: output std = 0.13274560868740082
+Epoch 2/2, loss: 0.0194
+DEBUG: output std = 0.10262443870306015
+Epoch 2/2, loss: 0.0225
+DEBUG: output std = 0.14280936121940613
+Epoch 2/2, loss: 0.0173
+DEBUG: output std = 0.11307502537965775
+Epoch 2/2, loss: 0.0245
+DEBUG: output std = 0.1365000456571579
+Epoch 2/2, loss: 0.0245
+DEBUG: output std = 0.13312691450119019
+Epoch 2/2, loss: 0.0332
+DEBUG: output std = 0.14780548214912415
+Epoch 2/2, loss: 0.0424
+DEBUG: output std = 0.13628345727920532
+Epoch 2/2, loss: 0.0223
+DEBUG: output std = 0.14667010307312012
+Epoch 2/2, loss: 0.0291
+DEBUG: output std = 0.13275843858718872
+Epoch 2/2, loss: 0.0196
+DEBUG: output std = 0.13478097319602966
+Epoch 2/2, loss: 0.0300
+DEBUG: output std = 0.1195409744977951
+Epoch 2/2, loss: 0.0237
+DEBUG: output std = 0.13054177165031433
+Epoch 2/2, loss: 0.0197
+DEBUG: output std = 0.12428107857704163
+Epoch 2/2, loss: 0.0230
+DEBUG: output std = 0.12309258431196213
+Epoch 2/2, loss: 0.0233
+DEBUG: output std = 0.14668044447898865
+Epoch 2/2, loss: 0.0158
+DEBUG: output std = 0.10519338399171829
+Epoch 2/2, loss: 0.0370
+DEBUG: output std = 0.14476238191127777
+Epoch 2/2, loss: 0.0232
+DEBUG: output std = 0.13397863507270813
+Epoch 2/2, loss: 0.0224
+DEBUG: output std = 0.1343831568956375
+Epoch 2/2, loss: 0.0186
+DEBUG: output std = 0.14247576892375946
+Epoch 2/2, loss: 0.0319
+DEBUG: output std = 0.12479258328676224
+Epoch 2/2, loss: 0.0268
+DEBUG: output std = 0.1238626092672348
+Epoch 2/2, loss: 0.0200
+DEBUG: output std = 0.1341390460729599
+Epoch 2/2, loss: 0.0203
+DEBUG: output std = 0.10771631449460983
+Epoch 2/2, loss: 0.0275
+DEBUG: output std = 0.13689376413822174
+Epoch 2/2, loss: 0.0211
+DEBUG: output std = 0.15626908838748932
+Epoch 2/2, loss: 0.0154
+DEBUG: output std = 0.15018899738788605
+Epoch 2/2, loss: 0.0207
+DEBUG: output std = 0.15126076340675354
+Epoch 2/2, loss: 0.0194
+DEBUG: output std = 0.12579375505447388
+Epoch 2/2, loss: 0.0206
+DEBUG: output std = 0.11071985960006714
+Epoch 2/2, loss: 0.0153
+DEBUG: output std = 0.11870718747377396
+Epoch 2/2, loss: 0.0244
+DEBUG: output std = 0.1412498652935028
+Epoch 2/2, loss: 0.0228
+DEBUG: output std = 0.14577500522136688
+Epoch 2/2, loss: 0.0189
+DEBUG: output std = 0.12044523656368256
+Epoch 2/2, loss: 0.0181
+DEBUG: output std = 0.13384351134300232
+Epoch 2/2, loss: 0.0201
+DEBUG: output std = 0.13590823113918304
+Epoch 2/2, loss: 0.0158
+DEBUG: output std = 0.15660718083381653
+Epoch 2/2, loss: 0.0216
+DEBUG: output std = 0.14029237627983093
+Epoch 2/2, loss: 0.0284
+DEBUG: output std = 0.11456224322319031
+Epoch 2/2, loss: 0.0233
+DEBUG: output std = 0.1339297592639923
+Epoch 2/2, loss: 0.0252
+DEBUG: output std = 0.18229719996452332
+Epoch 2/2, loss: 0.0215
+DEBUG: output std = 0.12271580100059509
+Epoch 2/2, loss: 0.0164
+DEBUG: output std = 0.14641313254833221
+Epoch 2/2, loss: 0.0202
+DEBUG: output std = 0.12818826735019684
+Epoch 2/2, loss: 0.0295
+DEBUG: output std = 0.14886246621608734
+Epoch 2/2, loss: 0.0205
+DEBUG: output std = 0.13228094577789307
+Epoch 2/2, loss: 0.0183
+DEBUG: output std = 0.1448519080877304
+Epoch 2/2, loss: 0.0326
+DEBUG: output std = 0.1326914280653
+Epoch 2/2, loss: 0.0151
+DEBUG: output std = 0.11606885492801666
+Epoch 2/2, loss: 0.0197
+DEBUG: output std = 0.1473238170146942
+Epoch 2/2, loss: 0.0142
+DEBUG: output std = 0.14475791156291962
+Epoch 2/2, loss: 0.0196
+DEBUG: output std = 0.13666993379592896
+Epoch 2/2, loss: 0.0190
+DEBUG: output std = 0.12918147444725037
+Epoch 2/2, loss: 0.0332
+DEBUG: output std = 0.12439876794815063
+Epoch 2/2, loss: 0.0174
+DEBUG: output std = 0.13546571135520935
+Epoch 2/2, loss: 0.0191
+DEBUG: output std = 0.12299299985170364
+Epoch 2/2, loss: 0.0221
+DEBUG: output std = 0.14154525101184845
+Epoch 2/2, loss: 0.0233
+DEBUG: output std = 0.13184134662151337
+Epoch 2/2, loss: 0.0224
+DEBUG: output std = 0.1568334698677063
+Epoch 2/2, loss: 0.0307
+DEBUG: output std = 0.15023910999298096
+Epoch 2/2, loss: 0.0222
+DEBUG: output std = 0.1291588842868805
+Epoch 2/2, loss: 0.0202
+DEBUG: output std = 0.1486174762248993
+Epoch 2/2, loss: 0.0204
+DEBUG: output std = 0.1440388560295105
+Epoch 2/2, loss: 0.0172
+DEBUG: output std = 0.133266419172287
+Epoch 2/2, loss: 0.0238
+DEBUG: output std = 0.14964833855628967
+Epoch 2/2, loss: 0.0198
+DEBUG: output std = 0.14938217401504517
+Epoch 2/2, loss: 0.0204
+DEBUG: output std = 0.14617130160331726
+Epoch 2/2, loss: 0.0372
+DEBUG: output std = 0.10671868175268173
+Epoch 2/2, loss: 0.0166
+DEBUG: output std = 0.10799937695264816
+Epoch 2/2, loss: 0.0223
+DEBUG: output std = 0.10563651472330093
+Epoch 2/2, loss: 0.0232
+DEBUG: output std = 0.1064675822854042
+Epoch 2/2, loss: 0.0230
+DEBUG: output std = 0.1256769299507141
+Epoch 2/2, loss: 0.0286
+DEBUG: output std = 0.09819281846284866
+Epoch 2/2, loss: 0.0183
+DEBUG: output std = 0.13669952750205994
+Epoch 2/2, loss: 0.0195
+DEBUG: output std = 0.132828950881958
+Epoch 2/2, loss: 0.0134
+DEBUG: output std = 0.13727807998657227
+Epoch 2/2, loss: 0.0223
+DEBUG: output std = 0.14041532576084137
+Epoch 2/2, loss: 0.0251
+DEBUG: output std = 0.14134490489959717
+Epoch 2/2, loss: 0.0229
+DEBUG: output std = 0.1308780461549759
+Epoch 2/2, loss: 0.0196
+DEBUG: output std = 0.1472519189119339
+Epoch 2/2, loss: 0.0193
+DEBUG: output std = 0.15385732054710388
+Epoch 2/2, loss: 0.0166
+DEBUG: output std = 0.1262088418006897
+Epoch 2/2, loss: 0.0246
+DEBUG: output std = 0.11613664031028748
+Epoch 2/2, loss: 0.0179
+DEBUG: output std = 0.11423227190971375
+Epoch 2/2, loss: 0.0156
+DEBUG: output std = 0.13188715279102325
+Epoch 2/2, loss: 0.0245
+DEBUG: output std = 0.1286737620830536
+Epoch 2/2, loss: 0.0180
+DEBUG: output std = 0.13074932992458344
+Epoch 2/2, loss: 0.0118
+DEBUG: output std = 0.12402629107236862
+Epoch 2/2, loss: 0.0180
+DEBUG: output std = 0.11446061730384827
+Epoch 2/2, loss: 0.0190
+DEBUG: output std = 0.14494308829307556
+Epoch 2/2, loss: 0.0174
+DEBUG: output std = 0.12870272994041443
+Epoch 2/2, loss: 0.0178
+DEBUG: output std = 0.13030555844306946
+Epoch 2/2, loss: 0.0224
+DEBUG: output std = 0.12215691804885864
+Epoch 2/2, loss: 0.0276
+DEBUG: output std = 0.14011944830417633
+Epoch 2/2, loss: 0.0176
+DEBUG: output std = 0.13649588823318481
+Epoch 2/2, loss: 0.0207
+DEBUG: output std = 0.14557188749313354
+Epoch 2/2, loss: 0.0272
+DEBUG: output std = 0.16203613579273224
+Epoch 2/2, loss: 0.0381
+DEBUG: output std = 0.1393938660621643
+Epoch 2/2, loss: 0.0173
+DEBUG: output std = 0.1291046291589737
+Epoch 2/2, loss: 0.0192
+DEBUG: output std = 0.13717152178287506
+Epoch 2/2, loss: 0.0166
+DEBUG: output std = 0.13090647757053375
+Epoch 2/2, loss: 0.0384
+DEBUG: output std = 0.12904386222362518
+Epoch 2/2, loss: 0.0219
+DEBUG: output std = 0.1250704824924469
+Epoch 2/2, loss: 0.0182
+DEBUG: output std = 0.12298831343650818
+Epoch 2/2, loss: 0.0299
+DEBUG: output std = 0.14144480228424072
+Epoch 2/2, loss: 0.0195
+DEBUG: output std = 0.14488612115383148
+Epoch 2/2, loss: 0.0249
+DEBUG: output std = 0.12448206543922424
+Epoch 2/2, loss: 0.0112
+DEBUG: output std = 0.12218761444091797
+Epoch 2/2, loss: 0.0153
+DEBUG: output std = 0.14119893312454224
+Epoch 2/2, loss: 0.0244
+DEBUG: output std = 0.14154133200645447
+Epoch 2/2, loss: 0.0245
+DEBUG: output std = 0.14615380764007568
+Epoch 2/2, loss: 0.0210
+DEBUG: output std = 0.14713111519813538
+Epoch 2/2, loss: 0.0176
+DEBUG: output std = 0.1367945820093155
+Epoch 2/2, loss: 0.0163
+DEBUG: output std = 0.14018604159355164
+Epoch 2/2, loss: 0.0252
+DEBUG: output std = 0.1418386697769165
+Epoch 2/2, loss: 0.0239
+DEBUG: output std = 0.15031298995018005
+Epoch 2/2, loss: 0.0143
+DEBUG: output std = 0.14228567481040955
+Epoch 2/2, loss: 0.0192
+DEBUG: output std = 0.17201603949069977
+Epoch 2/2, loss: 0.0218
+DEBUG: output std = 0.14948952198028564
+Epoch 2/2, loss: 0.0176
+DEBUG: output std = 0.12571504712104797
+Epoch 2/2, loss: 0.0177
+DEBUG: output std = 0.18292231857776642
+Epoch 2/2, loss: 0.0127
+DEBUG: output std = 0.13850398361682892
+Epoch 2/2, loss: 0.0211
+DEBUG: output std = 0.11571118235588074
+Epoch 2/2, loss: 0.0136
+DEBUG: output std = 0.13075973093509674
+Epoch 2/2, loss: 0.0216
+DEBUG: output std = 0.1338704377412796
+Epoch 2/2, loss: 0.0188
+DEBUG: output std = 0.008676964789628983
+Epoch 2/2, loss: 0.0125
+Epoch 2/2, Epoch loss: 0.0217
+Model checkpointed.
+Model saved + training completed.

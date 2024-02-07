@@ -1,4 +1,5 @@
 import argparse
+import random
 import dataclasses
 import json
 import os
@@ -10,6 +11,8 @@ from torch.utils.data import DataLoader
 from torchvision import transforms
 from model import AgePredictionCNN
 from dataset import XRayAgeDataset
+import wandb
+from sklearn.model_selection import train_test_split
 
 
 @dataclasses.dataclass
@@ -58,22 +61,38 @@ def parse_args() -> Any:
     return args
 
 
+def validate_model(model, dataloader, criterion, device, hyperparams):
+    model.eval()
+    validation_loss = 0.0
+    with torch.no_grad():
+        for inputs, labels in dataloader:
+            inputs, labels = inputs.to(device), labels.to(device)
+            labels = labels / hyperparams.labels_norm
+            outputs = model(inputs)
+            loss = criterion(outputs.squeeze(), labels.float())
+            validation_loss += loss.item()
+    return validation_loss / len(dataloader)
+
+
 def train_model(
     model,
-    dataloader,
+    train_dataloader,
+    val_dataloader,
     criterion,
     optimizer,
     num_epochs,
     device,
     training_config,
     hyperparams,
+    lr_scheduler,
 ):
     """Train the model."""
     model.to(device)
+    top_val_loss = float("inf")
     for epoch in range(num_epochs):
         model.train()
         running_loss = 0.0
-        for inputs, labels in dataloader:
+        for inputs, labels in train_dataloader:
             inputs, labels = inputs.to(device), labels.to(device)
             labels = labels / hyperparams.labels_norm
             optimizer.zero_grad()
@@ -82,12 +101,27 @@ def train_model(
             loss.backward()
             optimizer.step()
             running_loss += loss.item()
-            print(f"DEBUG: output std = {outputs.std()}")
+
+            wandb.log({"batch_loss": loss.item()})
+
+            # print(f"DEBUG: output std = {outputs.std()}")
             print(f"Epoch {epoch+1}/{num_epochs}, loss: {loss.detach().item():.4f}")
-        epoch_loss = running_loss / len(dataloader)
-        print(f"Epoch {epoch+1}/{num_epochs}, Epoch loss: {epoch_loss:.4f}")
-        torch.save(model.state_dict(), training_config.model_save_path)
-        print("Model checkpointed.")
+
+        epoch_loss = running_loss / len(train_dataloader)
+
+        val_loss = validate_model(
+            model, val_dataloader, criterion, device, hyperparams
+        )  # Calculate validation loss
+        lr_scheduler.step(val_loss)
+        wandb.log({"epoch_loss": epoch_loss, "val_loss": val_loss})
+
+        print(
+            f"Epoch {epoch+1}/{num_epochs}, Epoch loss: {epoch_loss:.4f}, Val loss: {val_loss:.4f}"
+        )
+        if top_val_loss > val_loss:
+            top_val_loss = val_loss
+            torch.save(model.state_dict(), training_config.model_save_path)
+            print("Model checkpointed.")
 
 
 def main():
@@ -96,6 +130,9 @@ def main():
     config = load_config(args.config)
     hyperparams = ModelHyperparameters(**config["hyperparameters"])
     training_config = TrainingConfig(**config["training"])
+
+    wandb.init(project="age_prediction", config=config)
+
     transform = transforms.Compose(
         [
             transforms.Resize(hyperparams.image_size),
@@ -109,7 +146,21 @@ def main():
         ),
         transform=transform,
     )
-    dataloader = DataLoader(dataset, batch_size=hyperparams.batch_size, shuffle=True)
+    train_indices, val_indices = train_test_split(
+        range(len(dataset)),
+        test_size=0.2,  # Use 20% of the data for validation
+        random_state=random.randrange(0, 2**32 - 1),
+    )
+    train_subset = torch.utils.data.Subset(dataset, train_indices)
+    val_subset = torch.utils.data.Subset(dataset, val_indices)
+    # Create DataLoaders for both training and validation sets
+    train_dataloader = DataLoader(
+        train_subset, batch_size=hyperparams.batch_size, shuffle=True
+    )
+    val_dataloader = DataLoader(
+        val_subset, batch_size=hyperparams.batch_size, shuffle=False
+    )
+    # dataloader = DataLoader(dataset, batch_size=hyperparams.batch_size, shuffle=True)
     model = AgePredictionCNN(
         hyperparams.num_channels,
         hyperparams.dropout_rate,
@@ -120,21 +171,28 @@ def main():
     )
     criterion = MSELoss()
     optimizer = Adam(model.parameters(), lr=hyperparams.learning_rate)
+    lr_scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
+        optimizer, "min", patience=2, verbose=True
+    )
     device = torch.device(
         "cuda" if torch.cuda.is_available() and training_config.cuda else "cpu"
     )
     train_model(
         model,
-        dataloader,
+        train_dataloader,
+        val_dataloader,
         criterion,
         optimizer,
         hyperparams.num_epochs,
         device,
         training_config,
         hyperparams,
+        lr_scheduler,
     )
     torch.save(model, training_config.model_save_path)
+    wandb.save(training_config.model_save_path)
     print("Model saved + training completed.")
+    wandb.finish()
 
 
 if __name__ == "__main__":

@@ -1,0 +1,2 @@
+TODO:
+- figure out why some images in train.csv don't exist
